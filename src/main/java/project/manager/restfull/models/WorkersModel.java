@@ -42,7 +42,8 @@ public class WorkersModel implements Serializable {
             inverseJoinColumns = { @JoinColumn(name = "role_id") }
     )
     Set<RolesModel> rolesModelSet = new TreeSet<>();
-
+    @ManyToMany(mappedBy = "workersModels")
+    private Set<ProjectsModel> projectsModels = new TreeSet<>();
 
 
 

@@ -26,4 +26,7 @@ public class DocumentationModel implements Serializable {
     @ManyToOne
     @JoinColumn(name = "actionsModel")
     private ActionsModel actionsModel;
+    @ManyToOne
+    @JoinColumn(name = "projectsModel")
+    private ProjectsModel projectsModel;
 }

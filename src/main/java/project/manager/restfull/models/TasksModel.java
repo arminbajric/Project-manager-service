@@ -38,4 +38,7 @@ public class TasksModel implements Serializable {
     private Set<ActionsModel> actionsModels=new TreeSet<>();
     @OneToMany(mappedBy = "tasksModel")
     private Set<DocumentationModel> documentationModels=new TreeSet<>();
+    @ManyToOne
+    @JoinColumn(name = "projectId")
+    private ProjectsModel projectsModel;
 }
